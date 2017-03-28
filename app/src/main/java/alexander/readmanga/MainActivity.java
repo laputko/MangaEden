@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.jar.Attributes;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Person myPerson = new Person("Александр", 21);
-        final Manga firstManga = new Manga("Flower-dream", "Action", 1196, "53723124", "ad/asdqearvcw", 141642013, 2,"Flower Dream");
+
+        String[] arr ={"Action", "Adventure", "Drama", "Sci-fi", "Supernatural"};
+
+        final Manga firstManga = new Manga("Flower-dream", arr, 1196, "53723124", "ad/asdqearvcw", 141642013, 2,"Flower Dream");
 
         Button button1 = (Button) findViewById(R.id.button);
         button1.setOnClickListener(new View.OnClickListener() {

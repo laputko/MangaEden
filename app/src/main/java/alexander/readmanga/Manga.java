@@ -1,30 +1,95 @@
 package alexander.readmanga;
 
 
+import java.util.Arrays;
+
 public class Manga {
-    private String name;
-    private String genres;
-    private int year;
-    private String id;
-    private String image;
-    private int lastdate;
+    private String a;               //название
+    private String[] c;            //жанры
+    private int h;                  //год
+    private String i;               //индетификатор
+    private String im;              //изображение
+    private int ld;                 //последняя дата обновления
     private int s;
     private String t;
 
+    public String getA() {
+        return a;
+    }
 
-    Manga(String name, String genres, int year,String id, String image, int lastdate, int s, String t){
-        this.name = name;
-        this.genres = genres;
-        this.year = year;
-        this.id = id;
-        this.image = image;
-        this.lastdate = lastdate;
+    public void setA(String a) {
+        this.a = a;
+    }
+
+    public String[] getC() {
+        return c;
+    }
+
+    public void setC(String[] c) {
+        this.c = c;
+    }
+
+    public int getH() {
+        return h;
+    }
+
+    public void setH(int h) {
+        this.h = h;
+    }
+
+    public String getI() {
+        return i;
+    }
+
+    public void setI(String i) {
+        this.i = i;
+    }
+
+    public String getIm() {
+        return im;
+    }
+
+    public void setIm(String im) {
+        this.im = im;
+    }
+
+    public int getLd() {
+        return ld;
+    }
+
+    public void setLd(int ld) {
+        this.ld = ld;
+    }
+
+    public int getS() {
+        return s;
+    }
+
+    public void setS(int s) {
+        this.s = s;
+    }
+
+    public String getT() {
+        return t;
+    }
+
+    public void setT(String t) {
+        this.t = t;
+    }
+
+    Manga(String a, String[] c, int h, String i, String im, int ld, int s, String t){
+        this.a = a;
+        this.c = c;
+        this.h = h;
+        this.i = i;
+        this.im = im;
+        this.ld = ld;
         this.s = s;
         this.t = t;
     }
 
     @Override
     public String toString() {
-        return "Название: "+name+"\nЖанр: "+genres+"\nГод: "+lastdate+"\nID: "+id+"\nОбложка: "+image+"\nПоследнее: "+lastdate+"\nS: "+s+"\nT: "+t;
+        return "a: "+a+"\nc: "+Arrays.deepToString(c)+"\nh: "+h+"\ni: "+i+"\nim: "+im+"\nld: "+ld+"\ns: "+s+"\nt: "+t;
     }
 }
